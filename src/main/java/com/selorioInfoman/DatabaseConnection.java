@@ -9,7 +9,8 @@ public class DatabaseConnection{
     private String url = "jdbc:mysql://localhost:3306/infoman_db";
     private String user = "reiki";
     private String password = "1234";
-    public Connection connection;
+
+    private Connection connection;
 
     public DatabaseConnection(){
         try{
@@ -18,6 +19,10 @@ public class DatabaseConnection{
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public Connection getConnection(){
+        return connection;
     }
 
 }
